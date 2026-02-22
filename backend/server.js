@@ -26,7 +26,7 @@ const httpServer = createServer(app);
 
 export const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173", "https://pulse-app.vercel.app"],
+    origin: ["http://localhost:5173", "https://pulseapp-9ij8hkii.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
 });
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://pulse-app.vercel.app"],
+  origin: ["http://localhost:5173", "https://pulseapp-9ij8hkii.vercel.app"],
   credentials: true
 }));
 app.use(express.json());
